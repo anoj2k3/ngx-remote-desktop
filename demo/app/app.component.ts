@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { WebSocketTunnel } from '@dboterho/guacamole-common-js';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';

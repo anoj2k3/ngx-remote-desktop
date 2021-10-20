@@ -7,7 +7,7 @@ import { HttpModule } from '@angular/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/markdown/markdown';
@@ -32,8 +32,8 @@ import { FileSizePipe } from './pipes';
     MatSnackBarModule,
     CodemirrorModule,
     FormsModule,
-    RouterModule.forRoot([]),
-    NgbModule.forRoot()
+    NgbModule,
+    RouterModule.forRoot([])
   ],
   providers: [{provide: OverlayContainer, useClass: FullscreenOverlayContainer},
   ],

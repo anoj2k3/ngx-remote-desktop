@@ -10,10 +10,10 @@ import {
     Renderer2,
     ViewChild,
     AfterViewChecked,
+    AfterViewInit,
 } from '@angular/core';
 import { Client, Display, Keyboard, Mouse } from '@dboterho/guacamole-common-js';
 import { BehaviorSubject, Subscription } from 'rxjs';
-import { Observable } from 'rxjs/Observable';
 
 import { RemoteDesktopManager } from '../services';
 
@@ -26,7 +26,7 @@ import { RemoteDesktopManager } from '../services';
     `,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked {
+export class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked, AfterViewInit {
 
     /**
      * Emit the mouse move events to any subscribers
@@ -40,7 +40,7 @@ export class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked {
     @Input()
     private manager: RemoteDesktopManager;
 
-    @ViewChild('display')
+    @ViewChild('display', {static: true})
     private display: ElementRef;
 
     /**
@@ -65,8 +65,6 @@ export class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked {
      * Create the display canvas when initialising the component
      */
     ngOnInit(): void {
-        this.createDisplayCanvas();
-        this.bindSubscriptions();
     }
 
     /**
@@ -80,6 +78,11 @@ export class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked {
 
     ngAfterViewChecked(): void {
         this.setDisplayScale();
+    }
+
+    ngAfterViewInit() {
+        this.createDisplayCanvas();
+        this.bindSubscriptions();
     }
 
     /** 

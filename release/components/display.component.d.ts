@@ -1,6 +1,7 @@
-import { ElementRef, OnDestroy, OnInit, Renderer2, AfterViewChecked } from '@angular/core';
+import { ElementRef, OnDestroy, OnInit, Renderer2, AfterViewChecked, AfterViewInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked {
+import * as i0 from "@angular/core";
+export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked, AfterViewInit {
     private viewport;
     private renderer;
     /**
@@ -34,6 +35,7 @@ export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChe
      */
     ngOnDestroy(): void;
     ngAfterViewChecked(): void;
+    ngAfterViewInit(): void;
     /**
      * Bind all subscriptions
      */
@@ -115,4 +117,6 @@ export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChe
      * @param key
      */
     private handleKeyUp;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DisplayComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DisplayComponent, "ngx-remote-desktop-display", never, { "manager": "manager"; }, { "onMouseMove": "onMouseMove"; }, never, never>;
 }

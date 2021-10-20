@@ -150,10 +150,10 @@ export class RemoteDesktopComponent implements OnInit, OnDestroy {
     @ContentChild(ErrorMessageComponent)
     public errorMessage: ErrorMessageComponent;
 
-    @ViewChild('container')
+    @ViewChild('container', {static: false})
     private container: ElementRef;
 
-    @ViewChild('toolbar')
+    @ViewChild('toolbar', {static: false})
     private toolbar: ElementRef;
     
     /**

@@ -50,7 +50,7 @@ export declare class RemoteDesktopManager {
      * Subscribe to this if you want to be notified if text has been cut/copied within
      * the remote desktop.
      */
-    onRemoteClipboardData: ReplaySubject<{}>;
+    onRemoteClipboardData: ReplaySubject<unknown>;
     onKeyboardReset: BehaviorSubject<boolean>;
     onFocused: BehaviorSubject<boolean>;
     onFullScreen: BehaviorSubject<boolean>;
