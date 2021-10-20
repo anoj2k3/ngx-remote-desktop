@@ -30,13 +30,13 @@ For a full implementation example, see the [demo source code](https://github.com
 To use `ngx-remote-desktop` in your project, install it via npm:
 
 ```
-npm i @langazov/ngx-remote-desktop --save
+npm i @dboterho/ngx-remote-desktop --save
 ```
 
 We also require two peer dependencies:
 
 ```
-npm i @langazov/guacamole-common-js --save
+npm i @dboterho/guacamole-common-js --save
 npm i screenfull --save
 ```
 

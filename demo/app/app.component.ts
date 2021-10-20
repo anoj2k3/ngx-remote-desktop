@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
-import { WebSocketTunnel } from '@langazov/guacamole-common-js';
+import { WebSocketTunnel } from '@dboterho/guacamole-common-js';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import * as FileSaver from 'file-saver';
 

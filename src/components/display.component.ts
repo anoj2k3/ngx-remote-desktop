@@ -11,7 +11,7 @@ import {
     ViewChild,
     AfterViewChecked,
 } from '@angular/core';
-import { Client, Display, Keyboard, Mouse } from '@langazov/guacamole-common-js';
+import { Client, Display, Keyboard, Mouse } from '@dboterho/guacamole-common-js';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { Observable } from 'rxjs/Observable';
 

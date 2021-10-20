@@ -1,5 +1,5 @@
 import { URLSearchParams } from '@angular/http';
-import { Client, StringReader, Tunnel } from '@langazov/guacamole-common-js';
+import { Client, StringReader, Tunnel } from '@dboterho/guacamole-common-js';
 import { BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 /**

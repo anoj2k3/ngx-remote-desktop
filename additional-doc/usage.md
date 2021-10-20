@@ -8,8 +8,8 @@ In your `app.component.ts`, you define a new remote desktop client like this:
 ```typescript
 import { Component, OnInit } from '@angular/core';
 
-import { RemoteDesktopManager } from '@langazov/ngx-remote-desktop';
-import { WebSocketTunnel } from '@langazov/guacamole-common-js';
+import { RemoteDesktopManager } from '@dboterho/ngx-remote-desktop';
+import { WebSocketTunnel } from '@dboterho/guacamole-common-js';
 
 @Component({
     selector: 'app-root',
