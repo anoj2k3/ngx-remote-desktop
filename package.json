@@ -50,8 +50,8 @@
     "guacamole"
   ],
   "peerDependencies": {
-    "screenfull": "^5.1.0",
-    "@dboterho/guacamole-common-js": "0.0.7"
+    "@dboterho/guacamole-common-js": "0.0.7",
+    "screenfull": "^5.1.0"
   },
   "private": false,
   "devDependencies": {
