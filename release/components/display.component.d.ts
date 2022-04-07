@@ -1,6 +1,5 @@
 import { ElementRef, OnDestroy, OnInit, Renderer2, AfterViewChecked, AfterViewInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import * as i0 from "@angular/core";
 export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChecked, AfterViewInit {
     private viewport;
     private renderer;
@@ -37,6 +36,16 @@ export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChe
     ngAfterViewChecked(): void;
     ngAfterViewInit(): void;
     /**
+     * Release all the keyboards when the window loses focus
+     * @param event
+     */
+    onWindowBlur(event: any): void;
+    /**
+     * Resize the display scale when the window is resized
+     * @param event
+     */
+    onWindowResize(event: any): void;
+    /**
      * Bind all subscriptions
      */
     private bindSubscriptions;
@@ -48,16 +57,6 @@ export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChe
      * Bind input listeners if display is focused, otherwise, unbind
      */
     private handleFocused;
-    /**
-     * Release all the keyboards when the window loses focus
-     * @param event
-     */
-    onWindowBlur(event: any): void;
-    /**
-     * Resize the display scale when the window is resized
-     * @param event
-     */
-    onWindowResize(event: any): void;
     /**
      * Create the remote desktop display and bind the event handlers
      */
@@ -117,6 +116,4 @@ export declare class DisplayComponent implements OnInit, OnDestroy, AfterViewChe
      * @param key
      */
     private handleKeyUp;
-    static ɵfac: i0.ɵɵFactoryDeclaration<DisplayComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DisplayComponent, "ngx-remote-desktop-display", never, { "manager": "manager"; }, { "onMouseMove": "onMouseMove"; }, never, never>;
 }

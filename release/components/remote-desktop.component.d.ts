@@ -4,7 +4,6 @@ import { RemoteDesktopManager } from '../services';
 import { ConnectingMessageComponent } from './messages/connecting-message.component';
 import { DisconnectedMessageComponent } from './messages/disconnected-message.component';
 import { ErrorMessageComponent } from './messages/error-message.component';
-import * as i0 from "@angular/core";
 /**
  * The main component for displaying a remote desktop
  */
@@ -85,6 +84,4 @@ export declare class RemoteDesktopComponent implements OnInit, OnDestroy {
      */
     handleDisplayMouseMove($event: any): void;
     onDocumentMousemove($event: MouseEvent): void;
-    static ɵfac: i0.ɵɵFactoryDeclaration<RemoteDesktopComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<RemoteDesktopComponent, "ngx-remote-desktop", never, { "manager": "manager"; }, {}, ["connectingMessage", "disconnectedMessage", "errorMessage"], ["ngx-remote-desktop-toolbar-item[align=left]", "ngx-remote-desktop-toolbar-item[align=right]", "ngx-remote-desktop-connecting-message", "ngx-remote-desktop-disconnected-message", "ngx-remote-desktop-error-message", "ngx-remote-desktop-status-bar"]>;
 }

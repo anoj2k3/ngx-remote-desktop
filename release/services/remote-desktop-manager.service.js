@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RemoteDesktopManager = void 0;
-var http_1 = require("@angular/http");
+var http_1 = require("@angular/common/http");
 var guacamole_common_js_1 = require("@dboterho/guacamole-common-js");
 var rxjs_1 = require("rxjs");
 /**
@@ -185,10 +185,10 @@ var RemoteDesktopManager = /** @class */ (function () {
      */
     RemoteDesktopManager.prototype.buildParameters = function (parameters) {
         if (parameters === void 0) { parameters = {}; }
-        var params = new http_1.URLSearchParams();
+        var params = new http_1.HttpParams();
         for (var key in parameters) {
             if (parameters.hasOwnProperty(key)) {
-                params.set(key, parameters[key]);
+                params = params.set(key, parameters[key]);
             }
         }
         return params.toString();
